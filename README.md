@@ -48,6 +48,34 @@ Modular component structure
 1. Create a file named manifest.webmanifest in your /public directory.
 2. Add the following configuration:
 
+A Progressive Web App for writing notes, saving them locally, and receiving Firebase push notifications. Features a writing pad, a sidebar for saved texts and notifications, and PWA installability.
+
+Features
+Writing Pad: Write notes in a textarea; clears after saving.
+Sidebar: Shows saved texts (with delete buttons) and Firebase notifications (with dismiss buttons).
+Firebase Notifications: Displays foreground notifications in the sidebar; background notifications via service worker.
+
+PWA: Installable, standalone, and responsive.
+SetupClone and Install:
+
+git clone <repository-url>
+cd todo-pwa
+npm install
+npm install firebase
+configure Firebase:
+Set up a Firebase project and enable Cloud Messaging.
+Ensure src/firebase.js and public/firebase-messaging-sw.js have your Firebase config.
+Place firebase-messaging-sw.js in public/.
+Add PWA Assets:
+Verify public/manifest.json includes favicon.ico and logo192.png.
+Place icons in public/.
+Run:npm start
+Usage
+Write and Save: Type in the textarea, click Save to store and clear, or Clear to reset.
+Manage Sidebar: Delete saved texts or dismiss notifications.
+Notifications: Foreground notifications appear in the sidebar; background ones show via browser.
+Install PWA: Use browser's install option for standalone mode.
+
 json
 {
 "short_name": "E-Shop",
